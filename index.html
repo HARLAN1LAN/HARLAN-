@@ -4,74 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harlan's Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            background: url('your-background-image-link-goes-here') no-repeat center center fixed; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
         }
+
         nav {
-            background-color: #333;
+            display: flex;
+            justify-content: space-between;
+            background-color: rgba(0,0,0,0.6);
+            padding: 1em;
             color: #fff;
-            padding: 10px 0;
-            text-align: center;
         }
+
         nav a {
             color: #fff;
-            margin: 0 15px;
             text-decoration: none;
-            font-size: 1.2em;
+            margin: 0 1em;
         }
-        nav a:hover {
+
+        nav a:hover{
             color: #eee;
         }
-        section {
-            margin: 15px;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+
+        .slogan {
+            text-align: center;
+            font-size: 2em;
+            font-family: 'Pacifico', cursive;
+            color: #fff;
+            margin-top: 20%;
+            text-shadow: 2px 2px 4px #000000;
+            animation: fadein 2s;
         }
-        h2 {
-            color: #333;
-            font-size: 1.5em;
-            margin-bottom: 10px;
+
+        @keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
         }
-        section img {
-            width: 300px;
-            height: auto;
-            display: block;
-            margin: auto;
-        }
-        p {
-            font-size: 1.2em;
-            line-height: 1.6;
-        }
+
+        /* Other styling for your pages goes here */
+        
     </style>
 </head>
 <body>
-<nav>
-    <a href="#section1">我的照片</a> |
-    <a href="#section2">个人介绍</a> |
-    <a href="#section3">我的团队角色</a>
-</nav>
+    <nav>
+        <div>
+            <a href="#homepage">主页</a>
+            <a href="#intro">个人介绍</a>
+        </div>
+        <div class="dropdown">
+            <a href="#assignments">课程作业</a>
+            <div class="dropdown-content">
+                <a href="#">Assignment 1</a>
+                <a href="#">Assignment 2</a>
+            </div>
+        </div>
+    </nav>
 
-<section id="section1">
-    <h2>我的照片</h2>
-    <img src="https://cdn.jsdelivr.net/gh/HARLAN1LAN/imageuploadservice/img/%E4%B8%AA%E4%BA%BA%E7%85%A7%E7%89%87.jpg" alt="Harlan's image">
-</section>
+    <div class="slogan">
+        <p>WELCOME TO MY WORLD!</p> 
+    </div>
 
-<section id="section2">
-    <h2>个人介绍</h2>
-    <p>- English Name: Harlan</p>
-    <p>- Hobby: Drawing & Singing</p>
-    <p>Harlan is a lively and cheerful individual who is passionate about painting and singing. In the team, he is mainly responsible for technical processing and aesthetic enhancement.</p>
-</section>
-
-<section id="section3">
-    <h2>我的团队角色</h2>
-    <p>I serve as the Technical Director in my team.</p>
-</section>
+    <!-- Below, you can add the content for your homepage, about page, and assignments page -->
+    
 </body>
 </html>
